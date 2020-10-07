@@ -48,12 +48,6 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 
 # Demonstração
 
-<p align="center">
-  <a href="http://wa24.gear.host/api/tabelaapi/">
-    <img alt="Demo of app" src="https://github.com/TesteReteste/lim/blob/master/github/goToDemo2.png">
-  </a>
-</p>
-
 ![TelaApp](https://github.com/renanegobbi/App/blob/master/github/screenshot1.png)
 
 
