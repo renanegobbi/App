@@ -11,7 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebApi_OData.Models;
 using Microsoft.EntityFrameworkCore;
-
+using System.Web.Http.OData.Builder;
+using Microsoft.Data.Edm;
 
 namespace WebApi_OData
 {
@@ -29,10 +30,13 @@ namespace WebApi_OData
         {
             services.AddDbContext<DbClienteContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion")));
-            services.AddMvc(options => options.EnableEndpointRouting = false);
+            
             services.AddOData();
 
             services.AddControllersWithViews();
+            //services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddControllers(mvcOptions =>
+                mvcOptions.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,8 +73,6 @@ namespace WebApi_OData
                 routeBuilder.EnableDependencyInjection();
                 routeBuilder.Expand().Select().Count().OrderBy().Filter().MaxTop(null);
             });
-
-
         }
     }
 }
