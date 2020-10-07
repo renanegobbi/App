@@ -54,7 +54,7 @@ O projeto foi desenvolvido com as seguintes tecnologias:
   </a>
 </p>
 
-![api](https://github.com/TesteReteste/lim/blob/master/github/API.gif)
+![TelaApp](https://github.com/renanegobbi/App/blob/master/github/screenshot1.png)
 
 
 # Como usar
