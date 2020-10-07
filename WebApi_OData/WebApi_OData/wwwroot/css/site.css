@@ -1,71 +1,188 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿body {
+    margin-bottom: 60px;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+/* Navbar */
+nav.navbar {
+    background-color: #344e6b;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+#navbarNav li a {
+    margin-left: 0.5em;
+    font-size: 22px;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+#navbarNav a:hover {
+    color: darkgoldenrod;
+    background-color: darkgoldenrod;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+/* Menu lateral */
+.main_container {
+    position: fixed;
+    left: 0;
+    width: 16%;
+    height: 100%;
+    background: #f7f7f7;
+    transition: all 0.3s ease;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+#dashboard-menu {
+    list-style: none;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 0;
+    position: fixed;
+    left: 0;
+    width: 16%;
+    height: 100%;
+    background: #f7f7f7;
+    transition: all 0.3s ease;
+    position: fixed;
+    margin-top:70px;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+#dashboard-menu li {
+    border-bottom: 2px solid #dae1e8;
+    box-shadow: 0 2px 1px -1px #FFFFFF;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+#dashboard-menu li i {
+    font-size: 30px;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+#dashboard-menu li a,
+.home {
+    display: flex;
+    padding: 20px 14px 20px 14px;
+    /* margin-left: 15px;
+    margin-bottom: 5px; */
+    color: #6e829b;
+    outline: 0px;
+    line-height: 21px;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
 }
+
+#dashboard-menu li a span {
+    margin-left: 15%;
+}
+
+#dashboard-menu > li > a:hover,
+#dashboard-menu > li > i:hover {
+    background-color: darkgoldenrod;
+    color: white;
+}
+
+/*Menu-principal*/
+.hero-unit {
+    margin-top: 80px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    color: #6e829b;
+}
+
+.home {
+    color: #344e6b;
+    font-weight: bold;
+    cursor: text;
+}
+
+/* Footer */
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position:fixed;
+    bottom: 0px;
+    width: 84%;
+    margin-left: auto;
+    background-color: white;
 }
+
+/* Contato */
+span.contato-nome, span.contato-email {
+    font-weight: bold;
+}
+
+.contato {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.contato > div:nth-child(2n+1) {
+    margin-top: 1.2rem;
+}
+
+/*Dados*/
+#tabela-dados a {
+    color: #6e829b;
+    font-size: 18px;
+}
+
+/*Info*/
+.info {
+    font-size: 19px;
+    margin-left: 10px;
+}
+
+.img-projeto {
+    width: 45%;
+    display: block;
+    margin-left: 25%;
+    margin-right: auto;
+}
+
+.titulo_projeto {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+
+.col-2 {
+    max-width: 10.5%;
+}
+
+.col-10 {
+    max-width: 89.5%;
+}
+
+.main_container {
+    width: 60px;
+}
+
+#dashboard-menu {
+    width: 0px;
+    padding-left: 0px;
+}
+
+#dashboard-menu li a {
+    margin-left: 0px;
+    padding: 20px 45px 20px 14px;
+}
+
+#dashboard-menu li span:nth-child(2) {
+    display: none;
+}
+
+.home {
+    display: none;
+}
+
+.footer {
+    width: 94.0%
+}
+
+}
+
+/*Gráficos*/
+
+#pbiAppPlaceHolder > ui-view > div > div.logoBarWrapper > logo-bar > div > div > div > span > span > logo-bar-social-sharing > span > button,
+#pbiAppPlaceHolder > ui-view > div > div.logoBarWrapper > logo-bar > div > div > div > span > span > logo-bar-social-sharing > span > button > i,
+#pbiAppPlaceHolder > ui-view > div > div.logoBarWrapper > logo-bar > div > div > div > span > span > logo-bar-social-sharing > span > button,
+#pbiAppPlaceHolder > ui-view > div > div.logoBarWrapper > logo-bar > div > div > div {
+    display: none !important;
+}
+
+
+

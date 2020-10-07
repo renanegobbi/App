@@ -1,0 +1,38 @@
+﻿<div class="main_container">
+    <ul id="dashboard-menu">
+        @if ((string)ViewData["sessao"] != "Contatos")
+        {
+            <li class="home">HOME</li>
+            @*<li class="active"><a href=""><i class="large material-icons">insert_chart</i><span>Gráficos</span></a></li>
+            <li><a href=""><i class="large material-icons">grid_on</i><span>Dados</span></a></li>*@
+            @*<li><a href=""><i class="glyphicon glyphicon-info-sign"></i><span>Info</span></a></li>*@
+
+            <li>
+                <a class="" asp-controller="Home" asp-action="Index">
+                    Clientes
+                    @*<i class="large material-icons">insert_chart</i><span>Clientes</span>*@
+                </a>
+            </li>
+            <li>
+                <a class="" asp-controller="Home" asp-action="Pedidos">
+                    Pedidos
+                    @*<i class="large material-icons">grid_on</i><span>Pedidos</span>*@
+                </a>
+            </li>
+            <li>
+                <a class="" asp-controller="Home" asp-action="Produtos">
+                    Produtos
+                    @*<i class="glyphicon glyphicon-info-sign"></i><span>Produtos</span>*@
+                </a>
+            </li>
+
+        }
+        else if ((string)ViewData["sessao"] == "Contatos")
+        {
+            <li class="home">CONTATO</li>
+            <li><a><i class="glyphicon glyphicon-user"></i><span>Contatos</span></a></li>
+        }
+    </ul>
+</div>
+
+

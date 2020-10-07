@@ -1,0 +1,13 @@
+﻿@*@model testeLayout_.Models.Medicao*@
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Home";
+}
+
+@if((string)ViewData["sessao"] != "Contatos")
+{ 
+    <div class="hero-unit">
+        <h2 class="mt-2 p-2 titulo-secao">Painel de controle - @ViewData["sessao"]</h2>
+    </div>
+}

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Pedidos";
+}
+
+
+@model IEnumerable<WebApi_OData.Models.PEDIDO>
+
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <table class="table table-bordered table-striped" id="tabela-dados">
+            <tr>
+                <th id="teste">
+                    <a class="teste">ID</a>
+                </th>
+                <th>
+                    <a>DATAPEDIDO</a>
+                </th>
+                <th>
+                    <a>TOTAL</a>
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DATAPEDIDO)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TOTAL)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

@@ -11,15 +11,35 @@ namespace WebApi_OData.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        
+        private readonly DbClienteContext _contexto;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(DbClienteContext contexto)
         {
-            _logger = logger;
+            _contexto = contexto;
         }
 
         public IActionResult Index()
         {
+            ViewData["sessao"] = "Clientes";
+            return View(_contexto.Cliente.ToList());
+        }
+
+        public IActionResult Pedidos()
+        {
+            ViewData["sessao"] = "Pedidos";
+            return View(_contexto.Pedido.ToList());
+        }
+
+        public IActionResult Produtos()
+        {
+            ViewData["sessao"] = "Produtos";
+            return View(_contexto.Produto.ToList());
+        }
+
+        public IActionResult Contato()
+        {
+            ViewData["sessao"] = "Contatos";
             return View();
         }
 
